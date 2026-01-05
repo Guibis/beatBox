@@ -1,0 +1,116 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      max-width: 800px;
+      width: 100%;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1em;
+    }
+
+    .drum-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .drum-pad {
+      background: linear-gradient(145deg, #ffffff, #e6e6e6);
+      border: 3px solid rgba(255, 255, 255, 0.5);
+      border-radius: 16px;
+      padding: 30px 20px;
+      cursor: pointer;
+      transition: all 0.1s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .drum-pad:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      border-color: #667eea;
+    }
+
+    .drum-pad.active {
+      transform: scale(0.95);
+      background: linear-gradient(145deg, #667eea, #764ba2);
+      border-color: #fff;
+      box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+    }
+
+    .drum-pad.active .key,
+    .drum-pad.active .instrument {
+      color: white;
+    }
+
+    .key {
+      font-size: 2em;
+      font-weight: bold;
+      color: #667eea;
+      text-transform: uppercase;
+      transition: color 0.1s ease;
+    }
+
+    .footer {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .drum-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .drum-pad {
+        padding: 20px 15px;
+      }
+    }
