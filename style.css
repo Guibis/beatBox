@@ -28,7 +28,7 @@
     h1 {
       color: white;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 40px;
       font-size: 2.5em;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
@@ -89,6 +89,14 @@
       transition: color 0.1s ease;
     }
 
+    .instrument {
+      font-size: 0.9em;
+      color: #666;
+      text-align: center;
+      font-weight: 500;
+      transition: color 0.1s ease;
+    }
+
     .footer {
       text-align: center;
       color: rgba(255, 255, 255, 0.7);
@@ -96,7 +104,7 @@
       font-size: 0.9em;
     }
 
-    @media (max-width: 600px) {
+    @media (min-width: 320px) {
       .container {
         padding: 20px;
       }
@@ -114,3 +122,22 @@
         padding: 20px 15px;
       }
     }
+    @media (min-width: 600px) {
+      .container {
+        padding: 100px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      .drum-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .drum-pad {
+        padding: 40px 30px;
+      }
+    }
+
